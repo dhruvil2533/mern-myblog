@@ -10,7 +10,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs'); //node.js file system module
 const User = require('./models/User');
 const Post = require('./models/Post');
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors({ credentials: true, origin: "http://localhost:3000"}));
