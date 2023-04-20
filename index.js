@@ -13,7 +13,9 @@ const Post = require('./models/Post');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000"}));
+app.use(
+  cors({ credentials: true, origin: "https://mern-myblog.netlify.app" })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
